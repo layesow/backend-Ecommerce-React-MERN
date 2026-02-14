@@ -9,5 +9,12 @@ app.use(express.urlencoded({limit: "20kb"}));
 app.use(express.static("public"));
 
 
+// import routes
+import userAuthRoute from "./routes/auth.route.js";
+
+// use routes
+app.use("/api/v1/auth", userAuthRoute);
+
+
 
 export  {app};

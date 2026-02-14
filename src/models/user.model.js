@@ -36,7 +36,7 @@ const userSchema = Schema({
 }, { timestamps: true });
 
 // Hash the password before saving the user
-userSchema.methods.isPasswordMatch = async function(password) {
+userSchema.methods.isPasswordMatched = async function(password) {
     return await bcrypt.compare(password, this.password);
 }
 
