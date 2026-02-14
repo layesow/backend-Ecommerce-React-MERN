@@ -11,9 +11,11 @@ app.use(express.static("public"));
 
 // import routes
 import userAuthRoute from "./routes/auth.route.js";
+import adminAuthRoute from "./routes/admin/admin.auth.route.js";
 
 // use routes
 app.use("/api/v1/auth", userAuthRoute);
+app.use("/api/v1/admin/auth", adminAuthRoute);
 
 
 
